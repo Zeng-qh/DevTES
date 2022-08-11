@@ -1,9 +1,10 @@
 name: morning
 on:
-  [push]
-  # schedule: 
-  #  - cron:  '0 0 * * *' 
-  # workflow_dispatch:
+  push:
+    branches: [ master ]
+  schedule: 
+    - cron:  '0 0 * * *' 
+  workflow_dispatch:
 
 jobs:
   send_message:

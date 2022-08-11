@@ -10,7 +10,8 @@ today = datetime.now()
 start_date = os.environ['START_DATE'] # 日期格式的字符串 "2018-01-11"
 city = os.environ['CITY'] # 地区字符串 "深圳"
 birthday = os.environ['BIRTHDAY'] # 日期字符串  "08-16"
-Legal_start = os.environ['START_DATE']
+Legal_start = os.environ['LEGAL_START']
+print(Legal_start)
 #Legal_start = os.environ['LEGAL_START'] # 日期格式的字符串 "2018-01-11"
 
  
