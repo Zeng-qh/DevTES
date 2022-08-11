@@ -7,15 +7,22 @@ import os
 import random
 
 today = datetime.now()
-start_date = os.environ['START_DATE'] # 日期格式的字符串 "2018-01-11"
-city = os.environ['CITY'] # 地区字符串 "深圳"
-birthday = os.environ['BIRTHDAY'] # 日期字符串  "08-16"
-Legal_start=os.environ['LEGAL_START'] # 日期格式的字符串 "2018-01-11"
+# start_date = os.environ['START_DATE'] # 日期格式的字符串 "2018-01-11"
+# city = os.environ['CITY'] # 地区字符串 "深圳"
+# birthday = os.environ['BIRTHDAY'] # 日期字符串  "08-16"
+# Legal_start=os.environ['LEGAL_START'] # 日期格式的字符串 "2018-01-11"
 
-app_id = os.environ["APP_ID"]
-app_secret = os.environ["APP_SECRET"]
-user_id = os.environ["USER_ID"]
-template_id = os.environ["TEMPLATE_ID"]
+start_date = "2018-01-11" # 日期格式的字符串 
+city =  "深圳" # 地区字符串
+birthday ="08-16" # 日期字符串  
+Legal_start="2018-01-11" # 日期格式的字符串 "2018-01-11"
+
+# app_id = os.environ["APP_ID"]
+# app_secret = os.environ["APP_SECRET"]
+# user_id = os.environ["USER_ID"]
+# template_id = os.environ["TEMPLATE_ID"]
+
+
 
 
 # 对应模板格式
@@ -62,9 +69,7 @@ def get_random_color():
   return "#%06x" % random.randint(0, 0xFFFFFF)
 
 
-client = WeChatClient(app_id, app_secret)
 
-wm = WeChatMessage(client)
 wea,low,high  = get_weather()
 weekList=["星期一","星期二","星期三","星期四","星期五","星期六","星期日"]
 todaystr=today.strftime("%Y-%m-%d") 
@@ -84,6 +89,9 @@ data = {
   "words":{"value":get_words(), "color":get_random_color()},
   "Text":{"value":get_words(), "color":get_random_color()}
 }
-res = wm.send_template(user_id, template_id, data)
+
+# client = WeChatClient(app_id, app_secret)
+#wm = WeChatMessage(client)
+# res = wm.send_template(user_id, template_id, data)
 print(data)
-print(res)
+# print(res)
