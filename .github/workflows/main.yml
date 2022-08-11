@@ -6,6 +6,8 @@ name: morning
 #   schedule:
 #     - cron: "0 0 /1 * * ?"
 on:
+  push:
+      branches: [ master ]
   schedule:
     - cron: '30 5 * * 1,3'
     - cron: '30 5 * * 2,4'
