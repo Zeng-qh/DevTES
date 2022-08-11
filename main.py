@@ -67,8 +67,8 @@ def get_words():
 def get_random_color():
   return "#%06x" % random.randint(0, 0xFFFFFF)
 
-
-
+client = WeChatClient(app_id, app_secret)
+wm = WeChatMessage(client)
 wea,low,high  = get_weather()
 weekList=["星期一","星期二","星期三","星期四","星期五","星期六","星期日"]
 todaystr=today.strftime("%Y-%m-%d") 
@@ -92,7 +92,6 @@ data = {
 
 print(data)
 
-client = WeChatClient(app_id, app_secret)
-wm = WeChatMessage(client)
+
 res = wm.send_template(user_id, template_id, data)
 print(res)
