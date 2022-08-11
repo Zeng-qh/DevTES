@@ -7,20 +7,17 @@ import os
 import random
 
 today = datetime.now()
-# start_date = os.environ['START_DATE'] # 日期格式的字符串 "2018-01-11"
-# city = os.environ['CITY'] # 地区字符串 "深圳"
-# birthday = os.environ['BIRTHDAY'] # 日期字符串  "08-16"
-# Legal_start=os.environ['LEGAL_START'] # 日期格式的字符串 "2018-01-11"
+start_date = os.environ['START_DATE'] # 日期格式的字符串 "2018-01-11"
+city = os.environ['CITY'] # 地区字符串 "深圳"
+birthday = os.environ['BIRTHDAY'] # 日期字符串  "08-16"
+Legal_start=os.environ['LEGAL_START'] # 日期格式的字符串 "2018-01-11"
 
-start_date = "2018-01-11" # 日期格式的字符串 
-city =  "深圳" # 地区字符串
-birthday ="08-16" # 日期字符串  
-Legal_start="2018-01-11" # 日期格式的字符串 "2018-01-11"
+ 
 
-# app_id = os.environ["APP_ID"]
-# app_secret = os.environ["APP_SECRET"]
-# user_id = os.environ["USER_ID"]
-# template_id = os.environ["TEMPLATE_ID"]
+app_id = os.environ["APP_ID"]
+app_secret = os.environ["APP_SECRET"]
+user_id = os.environ["USER_ID"]
+template_id = os.environ["TEMPLATE_ID"]
 
 
 
