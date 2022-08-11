@@ -67,8 +67,7 @@ def get_words():
 def get_random_color():
   return "#%06x" % random.randint(0, 0xFFFFFF)
 
-client = WeChatClient(app_id, app_secret)
-wm = WeChatMessage(client)
+
 wea,low,high  = get_weather()
 weekList=["星期一","星期二","星期三","星期四","星期五","星期六","星期日"]
 todaystr=today.strftime("%Y-%m-%d") 
@@ -83,7 +82,7 @@ data = {
   "low":{"value":low},
   "high":{"value":high}, 
   "love_days":{"value":get_count()},
-  "Legal_couple":{"value": get_Legal_couple_days()},# 空字符或数值
+  "Legal_couple":{"value":get_Legal_couple_days()},# 空字符或数值
   "birthday_left":{"value":get_birthday()},
   "words":{"value":get_words(), "color":get_random_color()},
   "Text":{"value":get_words(), "color":get_random_color()}
@@ -92,6 +91,7 @@ data = {
 
 print(data)
 
-
+client = WeChatClient(app_id, app_secret)
+wm = WeChatMessage(client)
 res = wm.send_template(user_id, template_id, data)
 print(res)
