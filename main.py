@@ -76,7 +76,7 @@ wea,low,high  = get_weather()
 weekList=["星期一","星期二","星期三","星期四","星期五","星期六","星期日"]
 todaystr=today.strftime("%Y-%m-%d") 
 weekSrt=weekList[datetime.now().weekday()]
-festival="周末愉快!" if datetime.now().weekday()>=6 else ""
+festival="周末愉快!" if datetime.now().weekday()>=6 else localtime
 
 data = {
   "today":{"value":todaystr},
