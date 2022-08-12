@@ -95,8 +95,8 @@ data = {
 
 print(data)
 
-# client = WeChatClient(app_id, app_secret)
-# wm = WeChatMessage(client)
+client = WeChatClient(app_id, app_secret)
+wm = WeChatMessage(client)
 
-# res = wm.send_template(user_id, template_id, data)
-# print(res)
+res = wm.send_template(user_id, template_id, data)
+print(res)
