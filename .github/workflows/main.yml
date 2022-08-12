@@ -6,12 +6,11 @@ name: morning
 #   schedule:
 #     - cron: "0 0 1 * * ?"
 on:
-  push:
-      branches: [ master ]
+  # push:
+  #     branches: [ master ]
   schedule:
     - cron: '0 0 * * *'  # 
-    - cron: '50 * * * *' #  
-    - cron: '10 * * * *' #  
+    - cron: '0/29 * * * *' #  (29 58)
   workflow_dispatch:
 
 jobs:
