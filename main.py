@@ -7,7 +7,7 @@ import os
 import random
 import time
  
-localtime = time.localtime(time.time())
+localtime = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()) 
 print ("本地时间为 :", localtime)
 
 today = datetime.now()
@@ -95,8 +95,8 @@ data = {
 
 print(data)
 
-client = WeChatClient(app_id, app_secret)
-wm = WeChatMessage(client)
+# client = WeChatClient(app_id, app_secret)
+# wm = WeChatMessage(client)
 
-res = wm.send_template(user_id, template_id, data)
-print(res)
+# res = wm.send_template(user_id, template_id, data)
+# print(res)
