@@ -5,6 +5,10 @@ from wechatpy.client.api import WeChatMessage, WeChatTemplate
 import requests
 import os
 import random
+import time
+ 
+localtime = time.localtime(time.time())
+print ("本地时间为 :", localtime)
 
 today = datetime.now()
 start_date = os.environ['START_DATE'] # 日期格式的字符串 "2018-01-11"
@@ -93,5 +97,6 @@ print(data)
 
 client = WeChatClient(app_id, app_secret)
 wm = WeChatMessage(client)
+
 res = wm.send_template(user_id, template_id, data)
 print(res)
